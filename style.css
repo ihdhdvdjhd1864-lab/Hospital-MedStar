@@ -6,6 +6,9 @@
 body {
   font-family: sans-serif;
   overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
 }
 
 a {
@@ -16,6 +19,9 @@ ul {
 }
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
 }
 /* صفحه رقم واحد  */
 .navbar {
@@ -721,17 +727,12 @@ ul {
   background-color: #2568c9;
   color: white;
 }
-
-
-
-
-
-
+/* Media✅✅✅ كريم  بدايه  سيكشن   */
 @media (max-width: 450px) {
   .navbar {
     padding: 10px 20px;
     flex-direction: column;
-    width: 54%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
   }
@@ -853,5 +854,101 @@ ul {
   .box-Grah,
   .box12-text2 button {
     margin-top: 10px;
+  }
+  .scashn p {
+    max-width: 80%; /* أو جرب رقم بالـ px زي 300px */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* عشان الكلام يفضل متنسق في النص */
+  }
+}
+
+/* Tablet Media Query (iPad & Tablets) */
+@media (max-width: 1024px) and (min-width: 451px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 40px;
+  }
+  .img1 {
+    width: 220px;
+  }
+
+  /* Home Section */
+  .Home {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .img2 img {
+    width: 80%; /* تصغير الصورة شوية عشان التابلت */
+    margin-top: 40px;
+  }
+  .We {
+    width: 100%;
+  }
+
+  /* About Section (The Box) */
+  .box {
+    margin: 50px 40px;
+    gap: 30px;
+  }
+  .box img {
+    width: 45%; /* الحفاظ على الهيكل جنباً إلى جنب بس بمساحة أصغر */
+  }
+
+  /* Info Numbers - نخليها 2 في كل صف */
+  .infom .scashn2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* Services & Features - عمودين بدل 3 */
+  .box4,
+  .gloo {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 40px;
+  }
+
+  /* Pricing - عمودين (واحد هينزل تحت لوحده في النص أو نخليهم عمودين) */
+  .box7 {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 40px;
+  }
+
+  /* Doctors & Blog - عمودين */
+  .content30 .box9,
+  .content40 .box10 {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 40px;
+    gap: 20px;
+  }
+
+  /* Contact Section */
+  .box11 {
+    flex-direction: column;
+    margin: 0 40px;
+  }
+  .box11 img {
+    width: 350px; /* حجم متوسط للتابلت */
+    margin-bottom: 30px;
+  }
+
+  /* Subscribe Section */
+  .content60 .box12 {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 40px;
+  }
+  .box12-text2 {
+    margin-top: 20px;
+  }
+
+  /* Footer - عمودين */
+  .content70 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 40px;
+    gap: 40px;
   }
 }
