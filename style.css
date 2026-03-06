@@ -747,7 +747,11 @@ ul {
   .img1 {
     width: 180px;
   }
-
+.We .small{
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
   .Home {
     flex-direction: column;
     text-align: center;
