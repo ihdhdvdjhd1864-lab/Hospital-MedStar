@@ -21,6 +21,10 @@ html {
   overflow-x: hidden !important;
   position: relative;
 }
+/* إخفاء شريط التمرير للمتصفحات (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
 /* صفحه رقم واحد  */
 .navbar {
   box-sizing: border-box;
@@ -34,9 +38,9 @@ html {
   z-index: 150000;
   border-radius: 0 0 20px 20px;
   position: fixed;
-  animation: kimo 0.8s ease-in-out;
+  animation: navbar 0.8s ease-in-out;
 }
-@keyframes kimo {
+@keyframes navbar {
   0% {
     transform: translateY(-50px);
   }
@@ -735,9 +739,7 @@ ul {
     justify-content: space-evenly;
   }
   .navbar a {
-    font-size: 11px;
-        margin: 5px;
-
+    font-size: 12px;
   }
 
   .nav1 {
@@ -889,6 +891,12 @@ ul {
     width: 80%; /* تصغير الصورة شوية عشان التابلت */
     margin-top: 40px;
   }
+
+  .We .small {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+  }
   .We {
     width: 100%;
   }
@@ -954,5 +962,46 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     padding: 50px 40px;
     gap: 40px;
+  }
+}
+
+/* scroll animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* نخلي المحتوى كله يبدأ صغير ومختفي */
+#home .We,
+#home .img2 {
+  opacity: 0;
+  transform: scale(0.9); /* يبدأ أصغر شوية */
+  animation: appear 1s forwards; /* animation بتشتغل مرة واحدة */
+}
+
+/* نخلي الصورة والمحتوى يظهروا واحد واحد */
+#home .We {
+  animation-delay: 0.4s; /* المحتوى يظهر أولًا */
+}
+
+#home .img2 {
+  animation-delay: 0.8s; /* الصورة تظهر بعد شوية */
+}
+
+/* keyframes للحركة */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

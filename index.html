@@ -33,7 +33,6 @@
         </div>
       </div>
     </div>
-
     <div class="Home" id="home">
       <div class="We">
         <small class="small"
@@ -54,7 +53,7 @@
       </div>
     </div>
     <!--  صفحه رقم 2  -->
-    <div class="scashn" id="about">
+    <div class="scashn hidden" id="about">
       <h2>
         We Offer Different Services To <br />
         Improve Your Health
@@ -65,7 +64,7 @@
         laudantium.
       </p>
     </div>
-    <div class="box">
+    <div class="box hidden">
       <div class="box1">
         <h3>Who We Are</h3>
         <hr />
@@ -107,7 +106,7 @@
       <img src="img/about-img.jpeg" alt="" />
     </div>
     <!-- صفحه رقم 2 -->
-    <div class="infom">
+    <div class="infom hidden">
       <div class="scashn2">
         <div class="iii">
           <i class="fa-solid fa-house-chimney"></i>
@@ -140,7 +139,7 @@
       </div>
     </div>
     <!-- صفحه رقم  3 -->
-    <div class="box3">
+    <div class="box3 hidden">
       <h2>
         We Are Always Ready To Help You & <br />
         Your Family
@@ -152,7 +151,7 @@
       </p>
     </div>
 
-    <div class="box4">
+    <div class="box4 hidden">
       <div class="col">
         <i class="fas fa-ambulance"></i>
         <h4>Emergency Help</h4>
@@ -179,7 +178,7 @@
       </div>
     </div>
     <!-- صفحه رقم 4 -->
-    <div class="box5">
+    <div class="box5 hidden">
       <h3>Do You Need Emergency Medical Care? Call @ 1234 56789</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, voluptas
@@ -189,7 +188,7 @@
       <button class="shafaff">Learn More →</button>
     </div>
     <!-- صفحه رقم 6 -->
-    <div class="box6" id="services">
+    <div class="box6 hidden" id="services">
       <div class="box3">
         <h2>
           We Offer Different Services To <br />
@@ -266,7 +265,7 @@
       </div>
     </div>
     <!-- صفحه رقم7 -->
-    <div class="content10">
+    <div class="content10 hidden">
       <div class="box3">
         <h2>
           We Provide You The Best Treatemnt <br />
@@ -333,7 +332,7 @@
       </div>
     </div>
     <!-- صفحه رقم 8 -->
-    <div class="content20">
+    <div class="content20 hidden">
       <div class="box8">
         <img src="img/brand-1.png" alt="" />
         <img src="img/brand-2.png" alt="" />
@@ -341,7 +340,7 @@
         <img src="img/brand-4.png" alt="" />
       </div>
     </div>
-    <div class="content30" id="doctors">
+    <div class="content30 hidden" id="doctors">
       <div class="box31">
         <h2>Meet Our Experience Doctors</h2>
         <img src="img/section-img.png" alt="" />
@@ -379,7 +378,7 @@
       </div>
     </div>
     <!-- صفحه رقم 9 -->
-    <div class="content40" id="blogs">
+    <div class="content40 hidden" id="blogs">
       <div class="box31">
         <h2>
           Keep Up With Our Most Recent <br />
@@ -432,7 +431,7 @@
       </div>
     </div>
     <!-- صفحه رقم 10 -->
-    <div class="content50" id="contact">
+    <div class="content50 hidden" id="contact">
       <div class="box31">
         <h2>
           We Are Always Ready To Help You. <br />
@@ -443,25 +442,35 @@
       </div>
       <div class="box11">
         <div class="form11">
-          <form>
+          <form
+            action="https://formsubmit.co/karempc1020@gmail.com"
+            method="POST"
+            method="POST"
+          >
             <div class="inputs-grid">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Phone" />
-              <select>
+              <input name="Name" type="text" placeholder="Name" />
+              <input name="Email" type="email" placeholder="Email" />
+              <input name="Phone" type="tel" placeholder="Phone" />
+              <select name="department_name">
                 <option value="" disabled selected>Department</option>
                 <option value="cardiology">Cardiology</option>
                 <option value="neurology">Neurology</option>
+                <option value="Orthopedics">Orthopedics</option>
+                <option value="Internal Medicine">Internal Medicine</option>
+                <option value="General Surgery">General Surgery</option>
               </select>
-              <select>
+              <select name="doctor_id">
                 <option value="" disabled selected>Doctor</option>
                 <option value="dr1">Dr. Zyad Ali</option>
                 <option value="dr2">Dr. Mazen Osama</option>
                 <option value="dr2">Dr. Aisha Mostafa</option>
               </select>
-              <input type="date" />
+              <input name="appointment_date" type="date" />
 
-              <textarea placeholder="Write Your Message Here...."></textarea>
+              <textarea
+                name="message"
+                placeholder="Write Your Message Here...."
+              ></textarea>
 
               <button type="submit">Book An Appointment</button>
             </div>
@@ -473,7 +482,7 @@
       </div>
     </div>
     <!-- صفحه رقم 11 -->
-    <div class="content60">
+    <div class="content60 hidden">
       <div class="box12">
         <div class="box12-text">
           <h3>Sign up for newsletter</h3>
@@ -489,7 +498,7 @@
       </div>
     </div>
     <!-- صفحه رقم 12 -->
-    <div class="content70">
+    <div class="content70 hidden">
       <div class="cartss-content70-1">
         <h4>About Us</h4>
         <hr />
@@ -552,6 +561,7 @@
         <strong> Karemm Mohamed</strong>
       </p>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
