@@ -152,7 +152,7 @@
     </div>
 
     <div class="box4 hidden">
-      <div class="col hidden ">
+      <div class="col hidden">
         <i class="fas fa-ambulance"></i>
         <h4>Emergency Help</h4>
         <p>
@@ -341,7 +341,6 @@
       </div>
     </div>
 
-    
     <div class="content30 hidden" id="doctors">
       <div class="box31">
         <h2>Meet Our Experience Doctors</h2>
@@ -445,6 +444,7 @@
       <div class="box11">
         <div class="form11">
           <form
+            id="appointmentForm"
             action="https://formsubmit.co/karempc1020@gmail.com"
             method="POST"
             method="POST"
@@ -494,8 +494,13 @@
           </p>
         </div>
         <div class="box12-text2">
-          <input type="text" placeholder="Your email address" />
-          <button>Subscribe</button>
+          <input
+            form="appointmentForm"
+            name="subscriber_email"
+            type="text"
+            placeholder="Your email address"
+          />
+          <button type="submit" form="appointmentForm">Subscribe</button>
         </div>
       </div>
     </div>
@@ -551,8 +556,16 @@
           tenetur minus quos.
         </p>
         <div class="madea3">
-          <input id="momyazz" type="text" placeholder="Email Address" />
-          <button><i class="fa-solid fa-paper-plane"></i></button>
+          <input
+            id="momyazz"
+            form="appointmentForm"
+            name="newsletter_email"
+            type="text"
+            placeholder="Email Address"
+          />
+          <button type="submit" form="appointmentForm">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </div>
       </div>
     </div>

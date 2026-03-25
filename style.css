@@ -722,11 +722,11 @@ ul {
   margin-left: -30px;
   transition: all ease 0.3s;
 }
-.content70 .cartss-content70-4 .madea3 button:hover {
+/* .content70 .cartss-content70-4 .madea3 button:hover {
   background-color: transparent;
   color: white;
   transform: translateX(10px);
-}
+} */
 .texst-nahahh {
   padding: 20px;
   text-align: center;
@@ -920,6 +920,7 @@ ul {
     text-align: center;
   }
   .We {
+    
     width: 100%;
   }
 
