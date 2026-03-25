@@ -55,12 +55,13 @@ html {
 .nav1 a {
   margin: 10px;
   color: black;
-  font-weight: 400;
+  font-weight: 600;
 }
 .nav1 a:hover {
   color: rgb(0, 140, 255);
   transition: 0.3s;
 }
+
 .Home {
   min-height: 90vh;
   padding-top: 100px;
@@ -708,6 +709,9 @@ ul {
 .content70 .cartss-content70-4 .madea3 input::placeholder {
   color: white;
 }
+.madea3 #momyazz{
+  color: white;
+}
 .content70 .cartss-content70-4 .madea3 button {
   background-color: white;
   border: none;
@@ -740,10 +744,14 @@ ul {
   }
   .navbar a {
     font-size: 12px;
+
   }
 
   .nav1 {
     margin-top: 10px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
   }
 
   .img1 {
@@ -809,6 +817,20 @@ ul {
     margin: 30px 20px;
   }
 
+.content20 {
+    padding: 30px 15px; /* تقليل المسافات */
+  }
+
+  .content20 .box8 {
+    flex-wrap: wrap; /* السماح للعناصر بالنزول لسطر جديد */
+    justify-content: center; /* توسيط الصور */
+    gap: 15px; /* مسافة بسيطة بين الصور */
+  }
+
+  .content20 .box8 img {
+    max-width: 140px; /* تصغير حجم الصور على الموبايل */
+  }
+  
   /* doctors */
 
   .content30 .box9 {
