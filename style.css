@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
-  overflow-x: hidden !important;
+    font-family: "Inter", sans-serif;
+  overflow-x: hidden ;
   position: relative;
 }
 
@@ -57,11 +57,28 @@ html {
   margin: 10px;
   color: black;
   font-weight: 600;
+  position:relative;
+  transition: 0.3s;
 }
+.nav1 a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:rgb(0, 140, 255);
+transition:.4s;
+}
+
 .nav1 a:hover {
   color: rgb(0, 140, 255);
   transition: 0.3s;
 }
+.nav1 a:hover::after{
+width:100%;
+}
+
 
 .Home {
   min-height: 90vh;
