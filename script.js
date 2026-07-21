@@ -23,8 +23,8 @@ menuBtn.onclick = function () {
   navLinks.classList.toggle("active");
 
   if (navLinks.classList.contains("active")) {
-    menuBtn.innerHTML = "✕";
+    menuBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
   } else {
-    menuBtn.innerHTML = "☰";
+    menuBtn.innerHTML = `<i class="fa-solid fa-bars-staggered"></i>`;
   }
 };
