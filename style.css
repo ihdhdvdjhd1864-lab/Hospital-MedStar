@@ -21,6 +21,7 @@ html {
   overflow-x: hidden !important;
   position: relative;
 }
+
 /* إخفاء شريط التمرير للمتصفحات (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   display: none;
@@ -32,7 +33,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.244);
+  box-shadow: 0 0 25px 5px box-Grahrgba(0, 0, 0, 0.244);
   width: 100%;
   padding: 2px 100px;
   z-index: 150000;
@@ -449,6 +450,14 @@ hr {
   left: 0;
   background-color: rgba(0, 140, 255, 0.532);
   z-index: -2000;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 140, 255, 0.532);
+  z-index: -2000;
 }
 .content20 .box8 {
   display: flex;
@@ -526,11 +535,11 @@ hr {
 .content40 .box10 .box-Grah:hover {
   border: 2.5px solid #008cff;
   transform: translateY(-8px);
+  border-radius: 5px;
 }
-
 .content40 .box-Grah img {
   width: 100%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px;
 }
 .dada {
   padding: 20px;
@@ -709,7 +718,7 @@ ul {
 .content70 .cartss-content70-4 .madea3 input::placeholder {
   color: white;
 }
-.madea3 #momyazz{
+.madea3 #momyazz {
   color: white;
 }
 .content70 .cartss-content70-4 .madea3 button {
@@ -733,27 +742,53 @@ ul {
   background-color: #2568c9;
   color: white;
 }
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
 /* Media✅✅✅ كريم  بدايه  سيكشن   */
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    color: rgb(0, 140, 255);
+  }
   .navbar {
     padding: 10px 20px;
-    flex-direction: column;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
   }
   .navbar a {
     font-size: 12px;
-
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 10px;
   }
 
   .nav1 {
-    margin-top: 10px;
+    position: absolute;
+    top: 65px;
+    left: -100%;
+    width: 30%;
+    background: #03216365;
+    backdrop-filter: blur(30px);
     display: flex;
-    white-space: nowrap;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0;
+    transition: 0.5s;
+    gap: 25px;
+    border-radius: 20px;
+    height: 100vh;
   }
-
+  .nav1.active {
+    left: 0;
+  }
   .img1 {
     width: 180px;
   }
@@ -817,7 +852,7 @@ ul {
     margin: 30px 20px;
   }
 
-.content20 {
+  .content20 {
     padding: 30px 15px; /* تقليل المسافات */
   }
 
@@ -830,7 +865,7 @@ ul {
   .content20 .box8 img {
     max-width: 140px; /* تصغير حجم الصور على الموبايل */
   }
-  
+
   /* doctors */
 
   .content30 .box9 {
@@ -892,7 +927,7 @@ ul {
 }
 
 /* Tablet Media Query (iPad & Tablets) */
-@media (max-width: 1024px) and (min-width: 451px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   /* Navbar */
   .navbar {
     padding: 10px 40px;
@@ -920,7 +955,6 @@ ul {
     text-align: center;
   }
   .We {
-    
     width: 100%;
   }
 
