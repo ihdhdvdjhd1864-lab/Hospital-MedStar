@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-    font-family: "Inter", sans-serif;
-  overflow-x: hidden ;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -53,32 +53,54 @@ html {
 .img1 {
   width: 270px;
 }
+.navbar a {
+  font-size: 14px;
+  color: rgb(0, 140, 255);
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav1 {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
 .nav1 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   margin: 10px;
-  color: black;
+  color: rgba(108, 107, 107, 0.82);
   font-weight: 600;
-  position:relative;
+  position: relative;
   transition: 0.3s;
 }
-.nav1 a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:rgb(0, 140, 255);
-transition:.4s;
+.nav1 a i {
+  font-size: 20px;
+}
+
+.nav1 a span {
+  font-size: 13px;
+}
+.nav1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: rgb(0, 140, 255);
+  transition: 0.4s;
 }
 
 .nav1 a:hover {
   color: rgb(0, 140, 255);
   transition: 0.3s;
 }
-.nav1 a:hover::after{
-width:100%;
+.nav1 a:hover::after {
+  width: 100%;
 }
-
 
 .Home {
   min-height: 90vh;
@@ -720,6 +742,11 @@ ul {
 .content70 .cartss-content70-2 .madea2 ul li {
   margin-bottom: 15px;
 }
+
+.content70 .cartss-content70-2 .madea2 ul li a {
+  color: rgba(198, 196, 196, 0.82);
+}
+
 .content70 .cartss-content70-4 p {
   margin-bottom: 20px;
 }
@@ -767,6 +794,10 @@ ul {
   font-size: 32px;
   cursor: pointer;
 }
+.nav1 > img {
+  display: none;
+}
+
 /* Media✅✅✅ كريم  بدايه  سيكشن   */
 @media (max-width: 768px) {
   .menu-btn {
@@ -780,31 +811,42 @@ ul {
     justify-content: space-between;
     align-items: center;
   }
-  .navbar a {
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-right: 10px;
-  }
 
   .nav1 {
     position: absolute;
-    top: 65px;
+    top: 64px;
     left: -100%;
-    width: 30%;
-    background: #03216365;
+    width: 50%;
+    background: #f4f4f565;
     backdrop-filter: blur(30px);
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 30px 0;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     gap: 25px;
     border-radius: 20px;
     height: 100vh;
   }
   .nav1.active {
     left: 0;
+  }
+
+  .nav1 a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+  .nav1 a i {
+    font-size: 16px;
+  }
+  .nav1 > img {
+    display: block;
+    width: 70%;
+    margin: 5px auto;
   }
   .img1 {
     width: 180px;
