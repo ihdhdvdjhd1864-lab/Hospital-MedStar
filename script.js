@@ -1,3 +1,13 @@
+// إخفاء شاشة التحميل بعد 3 ثواني (3000ms)
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    let loader = document.getElementById("loader");
+    if (loader) {
+      loader.classList.add("hide");
+    }
+  }, 3000); // 👉 هنا الـ 3 ثواني، تقدر تزودها أو تقللها براحتك
+});
+
 let observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
